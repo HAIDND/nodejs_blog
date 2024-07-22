@@ -1,4 +1,5 @@
 import path from 'path';
+import { fileURLToPath } from 'url';
 import express from 'express';
 import { engine } from 'express-handlebars';
 import { routes } from './routes/index.js';
@@ -22,7 +23,11 @@ app.engine('.hbs', engine({ extname: '.hbs' }));
 
 app.set('view engine', '.hbs');
 //('view', path.join(__dirname,'resources', 'views'));
-app.set('views', './src/resources/views');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.set('views', path.join(__dirname, 'resources', 'views'));
+// app.set('views', './src/resources/views');
 //app.use(morgan())\
 
 //route of routes init
