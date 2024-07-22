@@ -13,7 +13,6 @@ const app = express();
 app.use(express.urlencoded(
 {
     extended: true,
-    parameterLimit: 10000,
 }
 ));
 app.use(express.json());
