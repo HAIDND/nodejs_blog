@@ -27,5 +27,5 @@ app.set('views', './src/resources/views');
 
 //route of routes init
 routes(app);
-const PORT = 3000;
+const PORT  = process.env.PORT || 3000;
 app.listen(PORT);
