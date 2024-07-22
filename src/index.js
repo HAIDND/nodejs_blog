@@ -12,7 +12,6 @@ const app = express();
 app.use(express.urlencoded(
 {
     extended: true,
-    limit: '10mb',
     parameterLimit: 10000,
 }
 ));
@@ -28,5 +27,5 @@ app.set('views', './src/resources/views');
 
 //route of routes init
 routes(app);
-
-app.listen(3000);
+const PORT = 3000;
+app.listen(PORT);
