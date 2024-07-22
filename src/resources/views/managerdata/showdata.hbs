@@ -1,0 +1,83 @@
+
+
+<div class="main_content container" style="background-color: orange;">
+    <h1>day là trang showdata</h1>
+    {{!-- {{#if showData}} --}}
+    <table class="container " style="width:100%">
+        <thead>
+            <tr>
+                <th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-0-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 4.951c-1.008 0-1.629 1.09-1.629 2.895v.31c0 1.81.627 2.895 1.629 2.895s1.623-1.09 1.623-2.895v-.31c0-1.8-.621-2.895-1.623-2.895" />
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-8.012 4.158c1.858 0 2.96-1.582 2.96-3.99V7.84c0-2.426-1.079-3.996-2.936-3.996-1.864 0-2.965 1.588-2.965 3.996v.328c0 2.42 1.09 3.99 2.941 3.99" />
+                    </svg>Name</th>
+                <th>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-link-45deg" viewBox="0 0 16 16">
+                        <path
+                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
+                        <path
+                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
+                    </svg>
+                    Link
+                </th>
+                <th><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-card-image" viewBox="0 0 16 16">
+                        <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        <path
+                            d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54L1 12.5v-9a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                    Image</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Add</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <td>
+                    <div class="row_data">{{this.name}}</div>
+                </td>
+                <td>
+                    <div class="row_data">{{this.link}}</div>
+                </td>
+                <td>
+                    <div class="row_data"><img style="width: 100px;height:100px;" src="{{this.image}}" alt=""></div>
+                </td>
+                <td>
+                    <div class="row_data">{{this.price}}</div>
+                </td>
+                <td>
+                    <div class="row_data"><a href="/admin/edit"><button style="margin-right:20px;">Edit
+                                product</button></a></div>
+                </td>
+                <td>
+                    <div class="row_data"><a href="/admin/add"><button style="margin-right:20px;">Add
+                                product</button></a></div>
+                </td>
+                <td>
+                    <div class="row_data"><a href="/admin/delete"><button style="margin-right:20px;">Delete
+                                product</button></a></div>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+    </table>
+    {{!-- {{/if}} --}}
+
+
+    {{!-- <a href="{row[2]}" class="flex flex-row items-center justify-between p-4 rounded-xl bg-gray-800">
+        <div class="flex flex-row items-center justify-start gap-2"><img src="{row[3]}">
+            <div class="text-lg">{row[1]}</div>
+        </div><img class="justify-self-end" src="/bio/arrow-right.svg" width="30" height="30">
+    </a>
+    <div class="lex flex-row items-center justify-between p-4 rounded-xl bg-gray-800"
+        style="background-color: rgb(211, 215, 195);color: black;text-shadow: 3px;">
+        Giá sản phẩm ~ {row[4]} {row[5]}</div> --}}
+
+</div>

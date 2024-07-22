@@ -1,0 +1,57 @@
+
+{{#if isShow}}
+<h1>Edit link aff</h1>
+<div class="container body">
+    <div class="container pt-1 primary row row-1"><input type="text" class="container col input-" onkeyup="enter_link()" ><button class="col-2 secondary button-" onclick="savenewlink()"> ENTER </button></div>
+    <div class="container pt-1 primary row row-2"><input type="text" class="container col input-" ><button class="col-2 secondary button-" onclick="savenewlink()"> ENTER </button></div>
+    <div class="container pt-1 primary row row-3"><input type="text" class="container col input-" ><button class="col-2 secondary button-" onclick="savenewlink()"> ENTER </button></div>
+    <div class="container pt-1 primary row row-4"><input type="text" class="container col input-" ><button class="col-2 secondary button-" onclick="savenewlink()"> ENTER </button></div>
+    <div class="container pt-1 primary row row-5"><input type="text" class="container col input-" ><button class="col-2 secondary button-" onclick="savenewlink()"> ENTER </button></div>
+    <div class="container pt-1 primary row row-6"><input type="text" class="container col input-" ><button class="col-2 secondary button-" onclick="savenewlink()"> ENTER </button></div>
+    <div class="container pt-1 primary row row-7"><input type="text" class="container col input-" ><button class="col-2 secondary button-" onclick="savenewlink()"> ENTER </button></div>
+</div>
+{{/if}}
+
+<div class="container">
+    <audio class="audio_div" id="myAudio" src="./nodejs_blog/src/public/sound/nice.mp3"></audio>
+    <source src="nice.mp3" type="audio/mpeg">
+    <button class="sound container primary bg-primary" value="nice" onclick="play_sound()">click to hear sound</button></div>
+
+
+<script>
+    let name_sound = document.querySelector('.audio_div').value +'.mp3';
+    var x = document.getElementById("myAudio");
+    function play_sound(){
+        console.log(name_sound)
+        console.log(typeof(name_sound))
+        x.play();
+    }
+</script>
+
+<script>
+
+    function savenewlink(){
+        const inputValue = document.querySelector('.input-').value;
+        
+        console.log('open this url on new tab ' ,inputValue)
+        window.open(inputValue)
+    }
+    function enter_link(){
+        let key = document.getElementsByClassName('input-');
+        key.addEventListener('keyup',function(event){
+            if( event.keyCode === 13)
+            {
+                console.log("event")
+            }
+            
+        })
+        const inputValue = document.querySelector('.input-').value;
+        if(key_press.keyCode == 13){
+            console.log('open this url on new tab ' ,inputValue)
+            window.open(inputValue)
+        }
+        
+        
+
+    }
+</script>

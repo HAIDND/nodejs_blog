@@ -1,0 +1,25 @@
+how to run application
+
+step1 - setting enviroment
+
+    -install nodejs
+    -install express(framework)
+    -install nodemon
+    -install express handlesbars (template engine)
+    -install node-sass
+    -
+step2 - setting constructer project
+
+    -create folder
+    -
+step3
+step4
+step5 - config MVC folder
+
+    -routes
+    -controller
+    -model
+step6 -code formater
+    -PRETIER ON PACKAGE.JSON
+    -lint-staged : auto run cmd line on PACKAGE.json 
+    -husky : auto run exxtension when commit a file to github

@@ -1,0 +1,285 @@
+{{#if createAffilate}}
+<h1>Create a new link product</h1>
+<form method="" class="container" style="margin-left: 200px;">
+  <div class="mb-3">
+    <label class="form-label">Tên sản phẩm</label>
+    <input type="text" class="form-control" id="" name="nameMotel">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Mô tả</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Link sản phẩm</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Link ảnh sản phẩm</label>
+    <input type="text" class="form-control" id="">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label"> Thuộc tính 1</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 2</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 3</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 4</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label for="formFileLg" class="form-label">Chọn ảnh</label>
+    <input class="form-control form-control-lg" id="formFileLg" type="file">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{{/if}}
+
+
+{{!-- createPost --}}
+{{#if createPost}}
+<h1>Create a new post</h1>
+<form method="" class="container" style="margin-left: 200px;">
+  <div class="mb-3">
+    <label class="form-label">Tên sản phẩm</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Mô tả</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Link sản phẩm</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Link ảnh sản phẩm</label>
+    <input type="text" class="form-control" id="">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label"> Thuộc tính 1</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 2</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 3</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 4</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label for="formFileLg" class="form-label">Chọn ảnh</label>
+    <input class="form-control form-control-lg" id="formFileLg" type="file">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{/if}}
+
+{{!--
+const motelModel = new Schema({
+authorID: String,
+nameMotel: { type: String, unique: true },
+price: String,
+description: String,
+image:{
+image01: String,
+image02: String,
+image03: String,
+image04: String,
+image05: String,
+image06: String,
+image07: String,
+image08: String,
+image09: String,
+image10: String,
+},
+address: {
+street: String,
+ward: String,
+district: String,
+city: String,
+country: String,
+},
+properties: {
+bedroom: Number,
+bathroom: Number,
+kitchen: Number,
+livingRoom: Number,
+kidsRoom: Number,
+balcony: Number,
+privateBathroom: Number,
+washingMachine: Number,
+airConditioner: Number,
+television: Number,
+refrigerator: Number,
+microwave: Number,
+dishwasher: Number,
+oven: Number,
+diningTable: Number,
+coffeeMachine: Number,
+microwaveOven: Number,
+playStation: Number,
+tablet: Number,
+tv: Number,
+camera: Number,
+securitySystem: Number,
+garden: Number,
+pool: Number,
+swimmingPool: Number,
+gym: Number,
+sauna: Number,
+spa: Number,
+laundry: Number,
+},
+priorityLevel: Number,
+isVerify: Boolean,
+isFeatured: Boolean,
+isHotNew: Boolean,
+isPopular: Boolean, --}}
+{{#if createMotel}}
+<h1>Create a new Motel</h1>
+<form action="/admin/save/motel" method="POST" class="container" style="margin-left: 200px;">
+  <div class="mb-3">
+    <label class="form-label">Tên sản phẩm</label>
+    <input type="text" class="form-control" id="" name="nameMotel">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Mô tả</label>
+    <input type="text" class="form-control" id="" name="description">
+  </div>
+  
+
+    <div class="mb-3">
+    <label class="form-label">address </label>
+    <input type="text" class="form-control" id="" name="address">
+  </div>
+    <div class="mb-3">
+    <label class="form-label"> Giá</label>
+    <input type="text" class="form-control" id="" name="price">
+  </div>
+  <div class="mb-3">
+    <label class="form-label"> Diện tích </label>
+    <input type="text" class="form-control" id="" name="acreage">
+  </div>
+  
+  {{!-- <div class="mb-3">
+    <label class="form-label">Phòng bếp</label>
+    <input type="text" class="" id="" name="kitchen" value="true">
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label"> Nhà WC </label>
+    <input type="checkbox" class="" id="" name="toilet" value="true">
+  </div>
+    <div class="mb-3">
+    <label class="form-label">Balcony </label>
+    <input type="checkbox" class="" id="" name="balcony" value="true">
+  </div>
+  <div class="mb-3">
+      <div class="mb-3">
+    <label class="form-label"> máy lạnh</label>
+      <input type="checkbox" id="vehicle3" name="airConditioner" value="true">
+  </div>
+  <div class="mb-3">
+      <div class="mb-3">
+    <label class="form-label"> Tủ lạnh </label>
+      <input type="checkbox" id="vehicle3" name="tuanh" value="Boat">
+  </div>
+  <div class="mb-3">
+      <div class="mb-3">
+    <label class="form-label"> Pet?</label>
+      <input type="checkbox" id="vehicle3" name="isPet" value="true">
+  </div>
+  <div class="mb-3">
+    <label class="form-label"> Status (còn/ko)</label>
+    <input type="checkbox" class="" id="" name="status" value="true">
+  </div>
+  {{!-- <div class="mb-3">
+    <label class="form-label">Hot deal</label>
+    <input type="checkbox" class="" id="" name="isHotDeal" value="true">
+  </div> --}}
+  <div class="mb-3">
+    <label class="form-label">Is verify ?</label>
+    <input type="checkbox" class="" id="" name="isVerify" value="true">
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label">Mức ưu tiên</label>
+    <select name="priorityLevel" id="">
+      <option value="1">mức 1 nhất</option>
+      <option value="2">mức 2 thường</option>
+      <option value="3">mức 3 ko ưu tiên</option>
+    </select>
+  </div> --}}
+    <div class="mb-3">
+    <label class="form-label">Link ảnh (root)  </label>
+    <input type="text" class="form-control" id="" name="image">
+  </div>
+  <div class="mb-3">
+    <label for="formFileLg" class="form-label">Chọn ảnh</label>
+    <input class="form-control form-control-lg" id="formFileLg" type="file">
+  </div>
+  <button type="submit" class="btn btn-primary">Thêm phòng</button>
+</form>
+{{/if}}
+
+
+{{!-- createPost --}}
+{{#if createAny}}
+<h1>Create Any</h1>
+<form method="" class="container" style="margin-left: 200px;">
+  <div class="mb-3">
+    <label class="form-label">Tên sản phẩm</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Mô tả</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Link sản phẩm</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Link ảnh sản phẩm</label>
+    <input type="text" class="form-control" id="">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label"> Thuộc tính 1</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 2</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 3</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Thuộc tính 4</label>
+    <input type="text" class="form-control" id="">
+  </div>
+  <div class="mb-3">
+    <label for="formFileLg" class="form-label">Chọn ảnh</label>
+    <input class="form-control form-control-lg" id="formFileLg" type="file">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{/if}}
